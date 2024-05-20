@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YSL School</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ea5dd4a5fd.js" crossorigin="anonymous"></script>
+  <style>
+   body{
+    font-family:sans-serif;
+    background-image: url('images/bg03.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      padding: 10px 20px;
+      transition: top 0.3s;
+    }
+
+    .navbar img {
+      height: 50px; /* Adjust height as needed */
+      vertical-align: middle;
+    }
+
+    .navbar a {
+      float: right;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .active {
+      background-color: #4CAF50;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 600px) { 
+      .navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+    .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  color: rgb(0, 0, 0, 0.75);
+  font-size: 16px;
+  padding: 16px 32px;
+}
+footer{
+    display: -wenkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: row-wrap;
+    padding: 50px;
+    color: #fff;
+    background-color: #25242a;
+    font-size: small;
+    height: 253px;
+}
+.footer > *{
+    flex: 1 100%
+}
+.left-area{
+    margin-right: -12em;
+}
+.footer-bottom img{
+    width: 30%;
+}
+.footer ul{
+    list-style: none;
+    padding-left: 0;
+}
+.footer li{
+    line-height: 2em;
+}
+.fooder a{
+    text-decoration: none;
+}
+.right-area{
+    display: -wenkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-flow: row wrap;
+}
+.right-area > *{
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+.box a{
+    color: #999;
+}
+.footer-bottom{
+    text-align: center;
+    color: #999;
+    padding-top: 50px;
+}
+.left-area p{
+    padding-right: 20%;
+    color: #999;
+}
+
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f5f5f5;
+      margin-right: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #000;
+      padding: 35px 20px;
+    }
+
+    /* CSS for main element */
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 520px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .intro h1 {
+      font-family: sans-serif;
+      font-size: 60px;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .intro p {
+      font-size: 20px;
+      color: #d1d1d1;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+
+ 
+
+    .achievements {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 80px;
+    }
+
+    .achievements .work {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .achievements .work i {
+      width: fit-content;
+      font-size: 50px;
+      color: #333333;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      padding: 12px;
+    }
+
+    .achievements .work .work-heading {
+      font-size: 20px;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .achievements .work .work-text {
+      font-size: 15px;
+      color: #ffffff;
+      margin: 10px 0;
+    }
+
+    .about-me {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 80px;
+      border-top: 2px solid #eeeeee;
+    }
+
+    .about-me img {
+      width: 500px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .about-me-text h2 {
+      font-size: 30px;
+      color: #333333;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .about-me-text p {
+      font-size: 15px;
+      color: #585858;
+      margin: 10px 0;
+    }
+
+    /* CSS for footer */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #25242a;
+      padding: 40px 80px;
+    }
+
+    .footer .copy {
+      color: #fff;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+    .bottom-links .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="yslschool-home.html">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Academics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Avents</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="yslschool-contact.html">Content</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="yslschool.html"> Registration</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="intro">
+      <h1>YSL School</h1>
+      <p>Welcome to YSL Websites.</p>
+    
+    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="achievements">
+      <div class="work">
+        <i class="fa-solid fa-hand-holding-heart" style="color: #06142d;"></i>
+         <p class="work-heading">Our Mission</p>
+        <p class="work-text">At YSL School, we believe every student is special.
+           We create a friendly and exciting place where students can learn and grow.
+           Our goal is to help students become confident, kind, and ready for the future.</p>
+      </div>
+      <div class="work">
+        <i class="fa-solid fa-eye" style="color: #06142d;"></i>
+        <p class="work-heading">Our Vision</p>
+        <p class="work-text">We want YSL School to be a place where students love to learn. 
+          We encourage curiosity, creativity, and thinking skills,
+           helping students find their interests and do well in their studies.</p>
+      </div>
+      <div class="work">
+        <i class="fa-solid fa-people-group" style="color: #06142d;"></i>
+        <p class="work-heading">Join Our Family</p>
+        <p class="work-text">Explore our website, visit our campus, and see why YSL is the best place for your child’s education.</p>
+      </div>
+    </div>
+    <div class="about-me">
+      <div class="about-me-text">
+        <h2>About Me</h2>
+        <p>I am a web developer and I love to create websites. I am a very good developer and I am always looking for new projects. I am a very good developer and I am always looking for new projects.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="me">
+    </div>
+  </main>
+
+<footer class="footer">
+  <div class="col-md-4">
+      <div class="left-area">
+          <h2>Contact</h2>
+          <ul class="box">
+              <li>Myanmar,Yangon</li>
+              <li>Email: yki299281@gmail.com</li>
+              <li>+95 9763951347</li>
+          </ul>
+          <div class="links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+      </div>
+  </div>
+  <div class="col-md-3">
+  <ul class="right-area">
+      <li class="link-area">
+          <h2>Support</h2>
+          <ul class="box h-box">
+              <li><a href="yslschool-home.html">Home</a></li>
+              <li><a href="yslschool.html">About</a></li>
+              <li><a href="">Latest</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Classes</a></li>
+          </ul>
+      </li>
+  </ul>
+</div>
+<div class="footer-bottom">
+ 
+  <p>All Right reserved by &copy;creativo 2024</p>
+</div>
+</footer>
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-50px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+    </script>
+</body>
+</html>
